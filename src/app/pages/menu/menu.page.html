@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button *ngFor="let game of gamesList" (click)="goGame(game)">
+    {{game.logicalName}} & {{game.emotionalName}}
+  </ion-button>
+</ion-content>
