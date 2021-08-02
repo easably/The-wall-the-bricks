@@ -15,7 +15,11 @@ export class MixBricksService {
     {
       name: 'Synonyms',
       component: () => import('src/app/components/logical/synonyms/synonyms.component')
-    }
+    },
+    {
+      name: 'Phrases',
+      component: () => import('src/app/components/logical/phrases/phrases.component')
+    },
   ];
 
   constructor(
