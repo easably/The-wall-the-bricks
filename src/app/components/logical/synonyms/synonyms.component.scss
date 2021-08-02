@@ -1,0 +1,36 @@
+:host {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.word {
+    padding: 3px 25px;
+    text-transform: capitalize;
+    font-size: 32px;
+    font-weight: 500;
+    color: #F7F7F7;
+    border: 2px solid #F7F7F7;
+    border-radius: 30px;
+}
+
+.synonyms-buttons {
+    display: flex;
+    flex-direction: column;
+
+    button {
+        width: 200px;
+        height: 40px;
+        margin: 8px 0;
+        background-color: #F7F7F7;
+        border-radius: 32px;
+        font-size: 20px;
+        color: #8B80FA;
+        transition: all 300ms;
+    }
+}

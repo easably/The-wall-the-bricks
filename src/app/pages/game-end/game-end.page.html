@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>game-end</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="game-end-wrapper" *ngIf="mode === 'win' else lose">
+    <h1>You Win!</h1>
+
+    <ion-button href="/menu">Main menu</ion-button>
+  </div>
+</ion-content>
+
+<ng-template #lose>
+  <div class="game-end-wrapper">
+    <h1>You Lose :(</h1>
+
+    <div class="game-end-buttons">
+      <ion-button href="/menu">Main menu</ion-button>
+    </div>
+  </div>
+</ng-template>

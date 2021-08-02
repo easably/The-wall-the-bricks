@@ -9,8 +9,16 @@ export class MixBricksService {
     {
       name: 'Balloon',
       component: () => import('src/app/components/emotional/balloon/balloon.component')
+    },
+    {
+      name: 'Scale',
+      component: () => import('src/app/components/emotional/scale/scale.component')
+    },
+    {
+      name: 'Water',
+      component: () => import('src/app/components/emotional/water/water.component')
     }
-  ];
+  ]
   private logicalList = [
     {
       name: 'Synonyms',
