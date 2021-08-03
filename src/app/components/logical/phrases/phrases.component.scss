@@ -1,3 +1,21 @@
-button {
-    margin: 5px;
+.control-btn {
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    button {
+        background: transparent;
+    }
+}
+
+.source-box {
+    margin: 20px;
+    padding: 17px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EAEAEA;
+    border-radius: 20px;
+    p {
+        color: #111111;
+    }
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { SpeechRecognition } from '@capacitor-community/speech-recognition-t';
-import { reject, resolve } from 'q';
+import { reject } from 'q';
 import { Subject } from 'rxjs';
 
 @Injectable({
