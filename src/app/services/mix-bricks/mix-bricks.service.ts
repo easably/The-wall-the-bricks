@@ -23,7 +23,11 @@ export class MixBricksService {
     {
       name: 'Synonyms',
       component: () => import('src/app/components/logical/synonyms/synonyms.component')
-    }
+    },
+    {
+      name: 'ConsonantWords',
+      component: () => import('src/app/components/logical//consonant-words/consonant-words.component')
+    },
   ];
 
   constructor(

@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { GamePageRoutingModule } from './game-routing.module';
 import { GamePage } from './game.page';
 import { SynonymsModule } from 'src/app/components/logical/synonyms/synonyms.module';
+import { ConsonantWordsModule } from 'src/app/components/logical/consonant-words/consonant-words.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { SynonymsModule } from 'src/app/components/logical/synonyms/synonyms.mod
     FormsModule,
     IonicModule,
     GamePageRoutingModule,
-    SynonymsModule
+    SynonymsModule,
+    ConsonantWordsModule
   ],
   declarations: [
     GamePage

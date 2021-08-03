@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "thewall",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

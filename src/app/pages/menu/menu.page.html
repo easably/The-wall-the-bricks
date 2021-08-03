@@ -5,7 +5,9 @@
 </ion-header>
 
 <ion-content>
-  <ion-button *ngFor="let game of gamesList" (click)="goGame(game)">
-    {{game.logicalName}} & {{game.emotionalName}}
-  </ion-button>
+  <div class="games-list">
+    <ion-button *ngFor="let game of gamesList" (click)="goGame(game)">
+      {{game.logicalName}} & {{game.emotionalName}}
+    </ion-button>
+  </div>
 </ion-content>
