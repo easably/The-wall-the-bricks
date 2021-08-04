@@ -22,12 +22,12 @@ export class MixBricksService {
   private logicalList = [
     {
       name: 'Synonyms',
-      description: 'Найди синоним слова',
+      nameDisplayed: 'Synonyms',
       component: () => import('src/app/components/logical/synonyms/synonyms.component')
     },
     {
       name: 'ConsonantWords',
-      description: 'Which one do you hear?',
+      nameDisplayed: 'Similar Words',
       component: () => import('src/app/components/logical//consonant-words/consonant-words.component')
     },
   ];
@@ -44,7 +44,8 @@ export class MixBricksService {
           logicalName: lg.name,
           logicalindex: lgInd,
           emotionalName: eg.name,
-          emotionalIndex: egInd
+          emotionalIndex: egInd,
+          gameName: lg.nameDisplayed + ' & ' + eg.name
         });
       });
     });

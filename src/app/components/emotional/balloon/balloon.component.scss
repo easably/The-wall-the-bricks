@@ -10,5 +10,15 @@
 img {
     position: absolute;
     top: 66px;
-    transition: all 1000ms;
+    transition: all 1s;
+    animation: balloon-start 1.5s;
+}
+
+@keyframes balloon-start {
+    from {
+        transform: translateY(900px);
+    }
+    to {
+        transform: translateY(0);
+    }
 }

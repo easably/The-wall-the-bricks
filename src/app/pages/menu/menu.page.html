@@ -7,7 +7,7 @@
 <ion-content>
   <div class="games-list">
     <ion-button *ngFor="let game of gamesList" (click)="goGame(game)">
-      {{game.logicalName}} & {{game.emotionalName}}
+      {{game.gameName}}
     </ion-button>
   </div>
 </ion-content>

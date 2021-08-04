@@ -11,6 +11,16 @@
     height: 0px;
     position: absolute;
     bottom: 0;
-    background-color: #4183b98c;
+    background-color: #6379c969;
     transition: all 1000ms;
+    animation: water-start 1.5s;
+}
+
+@keyframes water-start {
+    from {
+        height: 100%;
+    }
+    to {
+        height: 0px;
+    }
 }

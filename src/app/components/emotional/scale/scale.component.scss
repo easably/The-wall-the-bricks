@@ -23,10 +23,23 @@
     transform-origin: 50% 68%;
     transform: rotate(0deg);
     transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+    animation: scale-start 700ms;
 }
 
 .mic {
     position: absolute;
     left: calc(50% - 9px);
     bottom: -13px;
+}
+
+@keyframes scale-start {
+    0% {
+        transform: rotate(7deg);
+    }
+    50% {
+        transform: rotate(-7deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
