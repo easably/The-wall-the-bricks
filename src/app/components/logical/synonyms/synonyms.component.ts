@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MainBridgeService } from 'src/app/services/main-bridge/main-bridge.service';
 
@@ -32,9 +33,11 @@ export class SynonymsComponent implements OnInit {
   levelData: SynonymsData;
   isCanChoose: boolean = true;
   private currentLevel: number = 0;
+  private lives: number = 3;
 
   constructor(
-    private mainBridgeService: MainBridgeService
+    private mainBridgeService: MainBridgeService,
+    private location: Location
   ) { }
 
   ngOnInit() {
@@ -51,9 +54,13 @@ export class SynonymsComponent implements OnInit {
       } else {
         button.style.backgroundColor = '#ff8989';
         this.mainBridgeService.result.next(0);
+        this.lives--;
       }
       setTimeout(this.nextLevel.bind(this), 1000);
-      ;
+    }
+
+    if (this.lives === 0) {
+      this.mainBridgeService.wasteGame();
     }
   }
 
@@ -89,5 +96,9 @@ export class SynonymsComponent implements OnInit {
     } else {
       this.mainBridgeService.finishGame();
     }
+  }
+
+  goBack() {
+    this.location.back();
   }
 }

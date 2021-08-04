@@ -1,13 +1,30 @@
 :host {
     width: 100%;
     height: 100%;
-    padding: 116px 20px 46px 20px;
+    padding: 160px 20px 46px 20px;
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     z-index: 1;
+}
+
+.header {
+    width: 100%;
+    height: 56px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background-color: #8B80FA;
+    border-radius: 0px 0px 20px 20px;
+    
+    p {
+        width: 100%;
+        text-align: center;
+        color: #FFFFFF;
+    }
 }
 
 .task-block {
@@ -44,6 +61,7 @@
 
     &:disabled {
         background-color: #DADADA;
+        color: #8F8F8F;
     }
 
     &_answer {
@@ -54,6 +72,9 @@
     &_speak {
         width: 48px;
         height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border-radius: 50%;
     }
 }

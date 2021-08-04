@@ -12,7 +12,7 @@ enum Scale {'-80deg', '-64deg', '-48deg', '-32deg', '-16deg', '0deg', '16deg', '
 export class ScaleComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild('arrow') scaleArrow: ElementRef<HTMLImageElement>;
 
-  private resultSubscription: Subscription
+  private resultSubscription: Subscription;
 
   constructor(
     private mainBridgeService: MainBridgeService
@@ -20,9 +20,7 @@ export class ScaleComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnInit() {
     this.resultSubscription = this.mainBridgeService.result.subscribe(data => {
-      if (data !== 'finish' || data !== 'finish') {
-        this.answer(data);
-      }
+      this.answer(data);
     });
   }
 

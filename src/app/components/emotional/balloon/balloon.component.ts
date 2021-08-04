@@ -11,7 +11,6 @@ export class BalloonComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('balloon') private balloon: ElementRef<HTMLImageElement>;
 
   private resultSubscription: Subscription;
-  private lives: number = 3;
 
   constructor(
     private mainBridgeService: MainBridgeService
@@ -19,9 +18,9 @@ export class BalloonComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit() {
     this.resultSubscription = this.mainBridgeService.result.subscribe(data => {
-      if (data > 1) {
+      if (data > 4) {
         this.righthAnswer();
-      } else if (data === 0) {
+      } else {
         this.wrongAnswer();
       }
     });
@@ -45,14 +44,8 @@ export class BalloonComponent implements OnInit, AfterViewInit, OnDestroy {
   private righthAnswer() {}
 
   private wrongAnswer() {
-    this.lives--;
-
     const balloon = this.balloon.nativeElement;
     const step = (window.screen.height - 66 - balloon.offsetHeight) / 3;
     balloon.style.top = balloon.offsetTop + step + 'px';
-
-    if (this.lives <= 0) {
-      this.mainBridgeService.wasteGame();
-    }
   }
 }

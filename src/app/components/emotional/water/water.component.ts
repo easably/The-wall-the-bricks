@@ -11,7 +11,6 @@ export class WaterComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('water') private water: ElementRef<HTMLDivElement>;
 
   private resultSubscription: Subscription;
-  private lives: number = 3;
 
   constructor(
     private mainBridgeService: MainBridgeService
@@ -19,9 +18,9 @@ export class WaterComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit() {
     this.resultSubscription = this.mainBridgeService.result.subscribe(data => {
-      if (data > 1) {
+      if (data > 4) {
         this.rightAnswer();
-      } else if (data === 0) {
+      } else {
         this.wrongAnswer();
       }
     });
@@ -36,14 +35,8 @@ export class WaterComponent implements OnInit, AfterViewInit, OnDestroy {
   private rightAnswer() {}
 
   private wrongAnswer() {
-    this.lives--;
-
     const waterEl = this.water.nativeElement;
     const step = (window.screen.height - 56) / 3;
     waterEl.style.height = waterEl.offsetHeight + step + 'px';
-
-    if (this.lives <= 0) {
-      this.mainBridgeService.wasteGame();
-    }
   }
 }

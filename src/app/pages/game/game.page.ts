@@ -35,9 +35,6 @@ export class GamePage implements OnInit {
 
     const logicalInstance = this.logicalComponentView.createComponent(logicalFactory, null, this.injector);
     const emotionalInstance = this.emotionalComponentView.createComponent(emotionalFactory, null, this.injector);
-
-    console.log(logicalInstance);
-    console.log(emotionalInstance);
   }
 
   clearComponents() {
