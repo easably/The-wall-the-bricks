@@ -1,7 +1,0 @@
-{
-  "name": "thewall",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
