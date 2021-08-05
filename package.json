@@ -5,7 +5,8 @@
   "homepage": "https://elang.app/",
   "scripts": {
     "start": "ng serve",
-    "build": "ng build",
+    "build:android": "ionic cap copy android && ionic cap open android",
+    "build:ios": "ionic cap copy ios && ionic cap open ios",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -19,13 +20,21 @@
     "@angular/platform-browser": "~12.1.1",
     "@angular/platform-browser-dynamic": "~12.1.1",
     "@angular/router": "~12.1.1",
+<<<<<<< HEAD
     "@capacitor-community/speech-recognition-t": "file:../speech-plugin",
+=======
+    "@capacitor-community/text-to-speech": "^1.1.1",
+    "@capacitor/android": "3.1.2",
+>>>>>>> main
     "@capacitor/app": "1.0.2",
     "@capacitor/core": "3.1.2",
     "@capacitor/haptics": "1.0.2",
+    "@capacitor/ios": "3.1.2",
     "@capacitor/keyboard": "1.0.2",
+    "@capacitor/screen-reader": "^1.0.2",
     "@capacitor/status-bar": "1.0.2",
     "@ionic/angular": "^5.5.2",
+    "cordova-plugin-cocoapod-support": "^1.6.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"

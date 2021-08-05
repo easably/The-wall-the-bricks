@@ -24,3 +24,13 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+@keyframes header {
+    from {
+        height: 0px;
+    }
+    to {
+        height: 56px;
+    }
+}

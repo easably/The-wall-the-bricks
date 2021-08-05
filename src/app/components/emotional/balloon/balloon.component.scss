@@ -1,0 +1,24 @@
+:host {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #65baff8c;
+    overflow: hidden;
+    z-index: -1;
+}
+
+img {
+    position: absolute;
+    top: 66px;
+    transition: all 1s;
+    animation: balloon-start 1.5s;
+}
+
+@keyframes balloon-start {
+    from {
+        transform: translateY(900px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

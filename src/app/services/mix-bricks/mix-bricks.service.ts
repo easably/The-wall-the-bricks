@@ -9,16 +9,30 @@ export class MixBricksService {
     {
       name: 'Balloon',
       component: () => import('src/app/components/emotional/balloon/balloon.component')
+    },
+    {
+      name: 'Scale',
+      component: () => import('src/app/components/emotional/scale/scale.component')
+    },
+    {
+      name: 'Water',
+      component: () => import('src/app/components/emotional/water/water.component')
     }
-  ];
+  ]
   private logicalList = [
     {
       name: 'Synonyms',
+      nameDisplayed: 'Synonyms',
       component: () => import('src/app/components/logical/synonyms/synonyms.component')
     },
     {
       name: 'Phrases',
       component: () => import('src/app/components/logical/phrases/phrases.component')
+    },
+    {
+      name: 'ConsonantWords',
+      nameDisplayed: 'Similar Words',
+      component: () => import('src/app/components/logical//consonant-words/consonant-words.component')
     },
   ];
 
@@ -34,7 +48,8 @@ export class MixBricksService {
           logicalName: lg.name,
           logicalindex: lgInd,
           emotionalName: eg.name,
-          emotionalIndex: egInd
+          emotionalIndex: egInd,
+          gameName: lg.nameDisplayed + ' & ' + eg.name
         });
       });
     });
