@@ -1,0 +1,9 @@
+<div class="header">
+	<p>Find the synonym for the word</p>
+</div>
+
+<p class="word">{{levelData.target}}</p>
+
+<div class="synonyms-buttons">
+	<button #button *ngFor="let synonym of levelData.synonyms" (click)="onAnswer(button, synonym)">{{synonym.word}}</button>
+</div>

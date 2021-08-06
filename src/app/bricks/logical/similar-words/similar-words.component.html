@@ -1,0 +1,19 @@
+<div class="header">
+	<p>Which one do you hear?</p>
+</div>
+
+<div class="task-block">
+	<p>Which one do you hear?</p>
+
+	<div class="answer-buttons">
+		<button #answerButton class="button button_answer"
+			[disabled]="disableAnswerButtons"
+			*ngFor="let word of levelData.words"
+			(click)="onAnswer(answerButton, word)"
+		>{{word}}</button>
+	</div>
+
+	<button class="button button_speak" (click)="onSpeech()">
+		<img src="/assets/bricks/volume.svg">
+	</button>
+</div>

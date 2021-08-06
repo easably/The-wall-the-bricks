@@ -1,30 +1,31 @@
 import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { GameEndComponent } from './pages/game-end/game-end.component';
+import { GamePageComponent } from './pages/game-page/game-page.component';
+import { MenuPageComponent } from './pages/menu-page/menu-page.component';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'menu',
-    pathMatch: 'full'
-  },
-  {
     path: 'menu',
-    loadChildren: () => import('./pages/menu/menu.module').then( m => m.MenuPageModule)
+    component: MenuPageComponent
   },
   {
     path: 'game',
-    loadChildren: () => import('./pages/game/game.module').then( m => m.GamePageModule)
+    component: GamePageComponent
   },
   {
     path: 'game-end',
-    loadChildren: () => import('./pages/game-end/game-end.module').then( m => m.GameEndPageModule)
+    component: GameEndComponent
   },
+  {
+    path: '',
+    redirectTo: '/menu',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

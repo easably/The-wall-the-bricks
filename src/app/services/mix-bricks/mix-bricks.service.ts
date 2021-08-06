@@ -1,56 +1,25 @@
 import { Injectable } from '@angular/core';
+import { GamesList } from 'src/app/models/games-list.model';
+import { emotionalList, logicalList } from 'src/app/bricks/bricks-list';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class MixBricksService {
-  private emotionalList = [
-    {
-      name: 'Balloon',
-      component: () => import('src/app/components/emotional/balloon/balloon.component')
-    },
-    {
-      name: 'Scale',
-      component: () => import('src/app/components/emotional/scale/scale.component')
-    },
-    {
-      name: 'Water',
-      component: () => import('src/app/components/emotional/water/water.component')
-    }
-  ]
-  private logicalList = [
-    {
-      name: 'Synonyms',
-      nameDisplayed: 'Synonyms',
-      component: () => import('src/app/components/logical/synonyms/synonyms.component')
-    },
-    {
-      name: 'Phrases',
-      nameDisplayed: 'Phrase recognizer',
-      component: () => import('src/app/components/logical/phrases/phrases.component')
-    },
-    {
-      name: 'ConsonantWords',
-      nameDisplayed: 'Similar Words',
-      component: () => import('src/app/components/logical//consonant-words/consonant-words.component')
-    },
-  ];
+  constructor() { }
 
-  constructor(
-) { }
+  getGamesList(): GamesList[] {
+    const result: GamesList[] = [];
 
-  getGamesList() {
-    const result = [];
-
-    this.logicalList.forEach((lg, lgInd) => {
-      this.emotionalList.forEach((eg, egInd) => {
+    logicalList.forEach((lg, lgInd) => {
+      emotionalList.forEach((eg, egInd) => {
         result.push({
-          logicalName: lg.name,
-          logicalindex: lgInd,
-          emotionalName: eg.name,
+          logicalComponent: lg.componentName,
+          logicalIndex: lgInd,
+          emotionalComponent: eg.componentName,
           emotionalIndex: egInd,
-          gameName: lg.nameDisplayed + ' & ' + eg.name
+          gameName: lg.name + ' & ' + eg.name
         });
       });
     });
@@ -58,10 +27,10 @@ export class MixBricksService {
     return result;
   }
 
-  async getGameComponents(logicalindex, emotionalIndex) {
+  async getGameComponents(logicalindex: number, emotionalIndex: number) {
     return {
-      logicalComponent: await this.logicalList[logicalindex].component(),
-      emotionalComponent: await this.emotionalList[emotionalIndex].component()
+      logicalComponent: await logicalList[logicalindex].component(),
+      emotionalComponent: await emotionalList[emotionalIndex].component()
     }
   }
 }

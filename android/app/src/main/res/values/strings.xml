@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">thewall</string>
-    <string name="title_activity_main">thewall</string>
-    <string name="package_name">io.ionic.starter</string>
-    <string name="custom_url_scheme">io.ionic.starter</string>
+    <string name="app_name">the-wall</string>
+    <string name="title_activity_main">the-wall</string>
+    <string name="package_name">com.englishingames.thewall</string>
+    <string name="custom_url_scheme">com.englishingames.thewall</string>
 </resources>

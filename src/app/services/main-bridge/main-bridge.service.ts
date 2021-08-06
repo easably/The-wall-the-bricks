@@ -7,6 +7,7 @@ import { Subject } from 'rxjs';
 })
 export class MainBridgeService {
   public result: Subject<number | 'finish' | 'wasted'> = new Subject();
+  // public result: Subject<number | 'finish' | 'wasted'> = new Subject();
 
   constructor(
     private router: Router

@@ -1,19 +1,30 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
-import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { AppComponent } from './app.component';
+import { BalloonComponent } from './bricks/emotional/balloon/balloon.component';
+import { WaterComponent } from './bricks/emotional/water/water.component';
+import { ScaleComponent } from './bricks/emotional/scale/scale.component';
+import { SynonymsComponent } from './bricks/logical/synonyms/synonyms.component';
+import { SimilarWordsComponent } from './bricks/logical/similar-words/similar-words.component';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+  declarations: [
+    AppComponent,
+    BalloonComponent,
+    WaterComponent,
+    ScaleComponent,
+    SynonymsComponent,
+    SimilarWordsComponent
   ],
-  bootstrap: [AppComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    PagesModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
