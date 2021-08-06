@@ -33,4 +33,9 @@ export const logicalList: Brick[] = [
 		componentName: 'SimilarWordsComponent',
 		component: () => import('src/app/bricks/logical/similar-words/similar-words.component')
 	},
+	{
+		name: 'Phrases Component',
+		componentName: 'PhrasesComponent',
+		component: () => import('src/app/bricks/logical/phrases/phrases.component')
+	},
 ];

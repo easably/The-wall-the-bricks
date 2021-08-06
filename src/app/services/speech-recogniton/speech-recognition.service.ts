@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { SpeechRecognition } from '@capacitor-community/speech-recognition-t';
-import { reject } from 'q';
 import { Subject } from 'rxjs';
 
 @Injectable({
@@ -22,7 +21,8 @@ export class SpeechRecognitionService {
       }
     }
     else {
-      reject("speech recognition is not available on this device");
+      alert("speech recognition plugin not available on this device")
+      return;
     }
   }
 
