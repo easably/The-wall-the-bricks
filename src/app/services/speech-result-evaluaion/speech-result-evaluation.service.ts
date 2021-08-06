@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { element } from 'protractor';
 import { Subject } from 'rxjs';
 
 @Injectable({

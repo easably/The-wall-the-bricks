@@ -27,6 +27,7 @@ export class MixBricksService {
     },
     {
       name: 'Phrases',
+      nameDisplayed: 'Phrase recognizer',
       component: () => import('src/app/components/logical/phrases/phrases.component')
     },
     {
