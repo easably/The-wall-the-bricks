@@ -14,6 +14,8 @@ export class PhrasesComponent implements OnInit {
   recognized : string[] = []
   source : string = "How can i help you?"
 
+  isPulsing : boolean = false
+
   mark : number = 0;
 
   constructor(
