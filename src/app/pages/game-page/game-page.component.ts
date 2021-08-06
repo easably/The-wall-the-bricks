@@ -17,7 +17,6 @@ export class GamePageComponent implements OnInit {
     private injector: Injector,
     private mixBricksService: MixBricksService,
     private activatedRoute: ActivatedRoute
-
   ) { }
 
   ngOnInit(): void {
@@ -34,8 +33,10 @@ export class GamePageComponent implements OnInit {
     const logicalFactory = this.cfr.resolveComponentFactory(logicalComponent);
     const emotionalFactory = this.cfr.resolveComponentFactory(emotionalComponent);
 
-    const logicalInstance = this.logicalComponentView.createComponent(logicalFactory, undefined, this.injector);
-    const emotionalInstance = this.emotionalComponentView.createComponent(emotionalFactory, undefined, this.injector);
+    const logicalInstance = this.logicalComponentView.createComponent(logicalFactory, undefined, this.injector).instance;
+    const emotionalInstance = this.emotionalComponentView.createComponent(emotionalFactory, undefined, this.injector).instance;
+// @ts-ignore
+    console.log(emotionalInstance.getBrickInfo())
   }
 
   clearComponents() {
