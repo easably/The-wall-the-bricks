@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+// global variables
+:root {
+    // fonts
+    --font-main: 'Roboto', sans-serif;
+
+    //colors
+    --accent-color: #758FEA;
+    --button-menu-bg: #EAEAEA;
+    --button-active-text: #FFFFFF;
+}
+
+@keyframes header {
+    from {
+        height: 0px;
+    }
+    to {
+        height: 56px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-main);
+}
+
+.wrapper {
+    padding: 32px 20px;
+}
+
+button {
+    background-color: #758FEA;
+    border-radius: 24px;
+    font-size: 24px;
+    color: white;
+    border: none;
+}

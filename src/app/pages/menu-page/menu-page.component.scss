@@ -1,0 +1,21 @@
+.games-list {
+    height: calc(100vh - 156px);
+    padding: 30px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 16px;
+    overflow-y: scroll;
+}
+
+button {
+    height: 180px;
+    background-color: var(--button-menu-bg);
+    border-radius: 16px;
+    font-size: 16px;
+    color: black;
+
+    &:active {
+        background-color: var(--accent-color);
+        color: var(--button-active-text);
+    }
+}
