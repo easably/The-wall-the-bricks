@@ -8,12 +8,15 @@ import { Subject } from 'rxjs';
 export class SpeechRecognitionService {
   speechResult: Subject<string[]> = new Subject
 
+  isListening: Subject<boolean> = new Subject
+
   constructor() {}
 
   async start() {
     console.log(SpeechRecognition);
     if((await SpeechRecognition.available()).available) {
       if((await SpeechRecognition.hasPermission()).permission) {
+        this.isListening.next(true)
         await this.startListening();
       }
       else {
@@ -27,7 +30,8 @@ export class SpeechRecognitionService {
   }
 
   async stopListening() {
-    await SpeechRecognition.stop();
+    this.isListening.next(false);
+    SpeechRecognition.stop();
   }
 
   private async startListening() {

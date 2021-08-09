@@ -38,4 +38,9 @@ export const logicalList: Brick[] = [
 		componentName: 'PhrasesComponent',
 		component: () => import('src/app/bricks/logical/phrases/phrases.component')
 	},
+	{
+		name: 'Test Component',
+		componentName: 'TestComponent',
+		component: () => import('src/app/bricks/logical/test/test.component')
+	},
 ];

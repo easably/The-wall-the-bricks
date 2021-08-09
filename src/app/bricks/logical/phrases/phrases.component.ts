@@ -3,7 +3,6 @@ import { SpeechRecognitionService } from 'src/app/services/speech-recogniton/spe
 import { SpeechResultEvaluationService } from 'src/app/services/speech-result-evaluaion/speech-result-evaluation.service';
 import { TextToSpeech } from '@capacitor-community/text-to-speech';
 
-
 @Component({
   selector: 'app-phrases',
   templateUrl: './phrases.component.html',
@@ -14,9 +13,9 @@ export class PhrasesComponent implements OnInit {
   recognized : string[] = []
   source : string = "How can i help you?"
 
-  isPulsing : boolean = false
-
   mark : number = 0;
+
+  isRecognitionStarted : boolean = false
 
   constructor(
     private speechRecogniton: SpeechRecognitionService,
@@ -24,9 +23,15 @@ export class PhrasesComponent implements OnInit {
   ) { }
   
   ngOnInit() {
+    this.speechRecogniton.isListening.subscribe(isListening => {
+      this.isRecognitionStarted = isListening
+    })
+
     this.speechRecogniton.speechResult.subscribe(result => {
-      //end listening audio animation
-      console.log(result);
+      this.speechRecogniton.stopListening()
+      this.isRecognitionStarted = false
+      console.log("recogniton stopped")
+      console.log("Result:" + result);
       this.speechResultEvaluation.calculateMark(this.source, result)
     })
 
@@ -36,9 +41,15 @@ export class PhrasesComponent implements OnInit {
 
   }
 
-  beginListening() {
-    //listening audio animatiom
-    this.speechRecogniton.start();
+  onListening() {
+    if(!this.isRecognitionStarted) {
+      this.speechRecogniton.start()
+      console.log("recognition started")
+    } 
+    else {
+      this.speechRecogniton.stopListening()
+      console.log("recogniton stopped")
+    } 
   }
 
   refresh () {
