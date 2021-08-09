@@ -29,7 +29,7 @@ export class SpeechRecognitionService {
     }
   }
 
-  async stopListening() {
+  stopListening() {
     this.isListening.next(false);
     SpeechRecognition.stop();
   }
@@ -39,7 +39,7 @@ export class SpeechRecognitionService {
       language:"en-US",
       maxResults: 5, 
     });
-    await this.stopListening()
+    this.stopListening()
     let matches : string[] = [];
     result.matches.forEach(match => {
       matches.push(match.toString())
