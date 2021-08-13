@@ -1,42 +1,33 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { MainBridgeService } from 'src/app/services/main-bridge/main-bridge.service';
+import { Component, OnInit } from '@angular/core';
+import { EmotionalBrick } from 'src/app/interfaces/brick.interface';
+import { brickProps } from 'src/app/types/brick.type';
+
 
 @Component({
   selector: 'app-water',
   templateUrl: './water.component.html',
   styleUrls: ['./water.component.scss']
 })
-export class WaterComponent implements OnInit, OnDestroy, AfterViewInit {
-  @ViewChild('water') private water: ElementRef<HTMLDivElement>;
-
-  private resultSubscription: Subscription;
-
-  constructor(
-    private mainBridgeService: MainBridgeService
-  ) { }
-
-  ngOnInit() {
-    this.resultSubscription = this.mainBridgeService.result.subscribe(data => {
-      if (data > 4) {
-        this.rightAnswer();
-      } else {
-        this.wrongAnswer();
-      }
-    });
+export class WaterComponent implements EmotionalBrick, OnInit {
+  private _brickProps: brickProps = {
+    name: 'Water',
+    timeGame: true,
+    viewPosition: 'full'
   }
 
-  ngOnDestroy() {
-    this.resultSubscription.unsubscribe();
+  constructor() {}
+
+  ngOnInit() {}
+
+  initializeBrick(initData) {
+    console.log('init data', initData);
   }
 
-  ngAfterViewInit() {}
+  get brickProps(): brickProps {
+    return this._brickProps;
+  }
 
-  private rightAnswer() {}
-
-  private wrongAnswer() {
-    const waterEl = this.water.nativeElement;
-    const step = (window.screen.height - 56) / 3;
-    waterEl.style.height = waterEl.offsetHeight + step + 'px';
+  set brickState(value) {
+    console.log('value', value);
   }
 }

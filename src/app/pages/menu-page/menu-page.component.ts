@@ -21,7 +21,6 @@ export class MenuPageComponent implements OnInit {
   }
 
   goGame(game: GamesList) {
-    console.log(game);
     this.router.navigate(['/game'], {
       queryParams: {
         ...game

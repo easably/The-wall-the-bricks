@@ -1,11 +1,11 @@
-interface Brick {
+type brick = {
     name: string;
     componentName: string;
 	description?: string;
     component: () => Promise<any>;
-  }
+}
 
-export const emotionalList: Brick[] = [
+export const emotionalList: brick[] = [
 	{
 		name: 'Balloon',
 		componentName: 'BalloonComponent',
@@ -23,7 +23,7 @@ export const emotionalList: Brick[] = [
 	}
 ];
 
-export const logicalList: Brick[] = [
+export const logicalList: brick[] = [
 	{
 		name: 'Synonyms',
 		componentName: 'SynonymsComponent',
@@ -35,5 +35,5 @@ export const logicalList: Brick[] = [
 		componentName: 'SimilarWordsComponent',
 		description: 'Which one do you hear?',
 		component: () => import('src/app/bricks/logical/similar-words/similar-words.component')
-	},
+	}
 ];

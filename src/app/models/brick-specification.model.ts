@@ -5,5 +5,10 @@ export interface LogicalSpec {
 export interface EmotionalSpec {
     name: string;
     timeGame: boolean;
-    position: 'top' | 'botton' | 'full';
+    displayPosition: 'top' | 'botton' | 'full';
+}
+
+export interface EmotionalInitData {
+    lives: number;
+    timeGame: number;
 }

@@ -7,6 +7,8 @@ import { emotionalList, logicalList } from 'src/app/bricks/bricks-list';
   providedIn: 'root'
 })
 export class MixBricksService {
+
+
   constructor() { }
 
   getGamesList(): GamesList[] {
@@ -15,11 +17,10 @@ export class MixBricksService {
     logicalList.forEach((lg, lgInd) => {
       emotionalList.forEach((eg, egInd) => {
         result.push({
-          logicalComponent: lg.componentName,
           logicalIndex: lgInd,
-          emotionalComponent: eg.componentName,
           emotionalIndex: egInd,
-          gameName: lg.name + ' & ' + eg.name
+          gameName: lg.name + ' & ' + eg.name,
+          gameDescription: lg.description
         });
       });
     });
@@ -28,9 +29,14 @@ export class MixBricksService {
   }
 
   async getGameComponents(logicalindex: number, emotionalIndex: number) {
+    const logicalBrick = logicalList[logicalindex];
+    const emotionalBrick = emotionalList[emotionalIndex];
+    const logicalModule = await logicalBrick.component();
+    const emotionalModule = await emotionalBrick.component();
+
     return {
-      logicalComponent: await logicalList[logicalindex].component(),
-      emotionalComponent: await emotionalList[emotionalIndex].component()
+      logicalComponent: logicalModule[logicalBrick.componentName],
+      emotionalComponent: emotionalModule[emotionalBrick.componentName]
     }
   }
 }

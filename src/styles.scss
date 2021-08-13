@@ -21,6 +21,11 @@
 * {
     margin: 0;
     padding: 0;
+    user-select: none !important;
+    -webkit-user-drag: none !important;
+    -webkit-user-select: none !important;
+    -webkit-touch-callout: none !important;
+    -webkit-tap-highlight-color: transparent !important;
 }
 
 html {
@@ -35,7 +40,25 @@ body {
 }
 
 .wrapper {
+    height: 100%;
     padding: 32px 20px;
+    box-sizing: border-box;
+}
+
+.logical-component {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.emotional-component {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    z-index: -1;
 }
 
 button {

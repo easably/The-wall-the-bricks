@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { EmotionalBrick, LogicalBrick } from 'src/app/interfaces/brick.interface';
 import { MainBridgeService } from 'src/app/services/main-bridge/main-bridge.service';
+import { brickProps, emotionalBrickInitializationData } from 'src/app/types/brick.type';
 
 interface SynonymsData {
   target: string;
@@ -28,19 +30,35 @@ const wordsData: SynonymsData[] = [
   templateUrl: './synonyms.component.html',
   styleUrls: ['./synonyms.component.scss']
 })
-export class SynonymsComponent implements OnInit {
+export class SynonymsComponent implements LogicalBrick, OnInit {
   levelData: SynonymsData;
   isCanChoose: boolean = true;
+  
+  emotionalComponent: EmotionalBrick;
   private currentLevel: number = 0;
   private lives: number = 3;
+  private levelLength = 3;
 
   constructor(
     private mainBridgeService: MainBridgeService
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  initialize(component: EmotionalBrick) {
+    this.emotionalComponent = component;
+
     this.levelData = wordsData[this.currentLevel];
     this.levelData.synonyms = this.mixWords(this.levelData.synonyms);
+
+    const brickProps: brickProps = component.brickProps;
+    const emotionalInitData: emotionalBrickInitializationData = {}
+
+    if (brickProps.timeGame) {
+      emotionalInitData.gameTimer = this.levelLength;
+    }
+
+    this.emotionalComponent.initializeBrick(emotionalInitData);
   }
 
   onAnswer(button: HTMLButtonElement, synonym: Synonym) {
@@ -48,10 +66,10 @@ export class SynonymsComponent implements OnInit {
       this.isCanChoose = false;
       if (synonym.isRight) {
         button.style.backgroundColor = '#89ff89';
-        this.mainBridgeService.result.next(10);
+        this.rigthAnswer(10);
       } else {
         button.style.backgroundColor = '#ff8989';
-        this.mainBridgeService.result.next(0);
+        this.wrongAnswer(0);
         this.lives--;
       }
       setTimeout(this.nextLevel.bind(this), 1000);
@@ -85,6 +103,14 @@ export class SynonymsComponent implements OnInit {
     }
   }
 
+  private rigthAnswer(value: number) {
+    this.emotionalComponent.brickState = value;
+  }
+
+  private wrongAnswer(value: number) {
+    this.emotionalComponent.brickState = value;
+  }
+
   private nextLevel() {
     this.currentLevel++;
     if (wordsData[this.currentLevel]) {
@@ -94,9 +120,5 @@ export class SynonymsComponent implements OnInit {
     } else {
       this.mainBridgeService.finishGame();
     }
-  }
-
-  goBack() {
-    // this.location.back();
   }
 }

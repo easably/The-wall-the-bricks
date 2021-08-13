@@ -1,0 +1,6 @@
+{
+	"appId": "com.englishingames.thewall",
+	"appName": "the-wall",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}

@@ -1,8 +1,9 @@
 .games-list {
-    height: calc(100vh - 156px);
-    padding: 30px 0px;
+    height: calc(100vh - 94px);
+    margin-top: 24px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-auto-rows: min-content;
     gap: 24px 16px;
     overflow-y: scroll;
 }

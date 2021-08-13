@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-game-end',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game-end.component.scss']
 })
 export class GameEndComponent implements OnInit {
+  private mode: 'win' | 'lose' = 'lose';
 
-  constructor() { }
+  constructor(
+    private activatedRoute: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+    this.mode = this.activatedRoute.snapshot.queryParams.mode;
   }
 
 }
