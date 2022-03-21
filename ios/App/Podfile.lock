@@ -1,0 +1,28 @@
+PODS:
+  - Capacitor (3.1.2):
+    - CapacitorCordova
+  - CapacitorCommunityTextToSpeech (1.1.1):
+    - Capacitor
+  - CapacitorCordova (3.1.2)
+
+DEPENDENCIES:
+  - "Capacitor (from `../../node_modules/@capacitor/ios`)"
+  - "CapacitorCommunityTextToSpeech (from `../../node_modules/@capacitor-community/text-to-speech`)"
+  - "CapacitorCordova (from `../../node_modules/@capacitor/ios`)"
+
+EXTERNAL SOURCES:
+  Capacitor:
+    :path: "../../node_modules/@capacitor/ios"
+  CapacitorCommunityTextToSpeech:
+    :path: "../../node_modules/@capacitor-community/text-to-speech"
+  CapacitorCordova:
+    :path: "../../node_modules/@capacitor/ios"
+
+SPEC CHECKSUMS:
+  Capacitor: 9d06cf7a97c4752037907979baade2f79f2800fa
+  CapacitorCommunityTextToSpeech: 31b948482c3a3d9c32896aefa87115b239bfc8fd
+  CapacitorCordova: b8e7144f5dad047965035dbed9c9855b1f0f64e8
+
+PODFILE CHECKSUM: 7a871ff22aff59bd9c203fe16db2a90e98e099b0
+
+COCOAPODS: 1.10.1

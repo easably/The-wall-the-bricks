@@ -1,0 +1,113 @@
+{
+  "configVersion": 1,
+  "timestamp": 1628862046888,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/327.4ed2764dee56295f2949.js",
+        "/395.926ae2daca97a843fbb0.js",
+        "/504.d2502145de9c1a73d617.js",
+        "/605.bc5c00b51bff292345ea.js",
+        "/716.bacaad930082560728bc.js",
+        "/901.138216feb5f185214fdb.js",
+        "/common.116f4bd45e684b5d2578.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main.253a72c3748c22138bb2.js",
+        "/manifest.webmanifest",
+        "/polyfills.1f68fb029bfec463bf06.js",
+        "/runtime.0d3d1c86ab632972fd37.js",
+        "/styles.cdfc2ecc69f2164beee9.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/bricks/balloon/balloon.svg",
+        "/assets/bricks/balloon/cloud-1.svg",
+        "/assets/bricks/balloon/cloud-2.svg",
+        "/assets/bricks/balloon/cloud-3.svg",
+        "/assets/bricks/mic.svg",
+        "/assets/bricks/scale-arrow.svg",
+        "/assets/bricks/scale-bg.svg",
+        "/assets/bricks/volume.svg",
+        "/assets/fonts/Roboto-Regular.ttf",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/327.4ed2764dee56295f2949.js": "8ae8c480bde2b58e112979220ab2ec2257b65149",
+    "/395.926ae2daca97a843fbb0.js": "5a393e7099cc0040ba1c2ba3ab694befa9ce059b",
+    "/504.d2502145de9c1a73d617.js": "a2baf051ec12f3baea510cb25220a8806140d935",
+    "/605.bc5c00b51bff292345ea.js": "791e216a42b1f317a4cb3d0a03516f89a8f8cc99",
+    "/716.bacaad930082560728bc.js": "9c97222c36a9dc8bbbc522de6d226f6a16ab8015",
+    "/901.138216feb5f185214fdb.js": "f6e90d3889b5f59d2153775cf4552af4e00bc2da",
+    "/assets/bricks/balloon/balloon.svg": "381d4116ea7bde67df011152ed8407c290782128",
+    "/assets/bricks/balloon/cloud-1.svg": "bbce63f1eaa6aa523a07cd8102c27e2647b7e56f",
+    "/assets/bricks/balloon/cloud-2.svg": "a5ff91d79cf824ee55c9afafbaa8cdefaf273546",
+    "/assets/bricks/balloon/cloud-3.svg": "cb0752250bd2822e611f5906be2badb559cad2e2",
+    "/assets/bricks/mic.svg": "a0808449747174c8b44cc118b90ef03a1288f886",
+    "/assets/bricks/scale-arrow.svg": "8d201b8bbfe77c5f6b9e386499a2d252f17d463c",
+    "/assets/bricks/scale-bg.svg": "ec58cfe924a34b9a3de63dc823a40cd3e497b87e",
+    "/assets/bricks/volume.svg": "91ae50ef8f5e1f2118be1d0ffb8d5b00c3ec6581",
+    "/assets/fonts/Roboto-Regular.ttf": "84d102488738b0ebbc7a5087973effbd54c95bd5",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/common.116f4bd45e684b5d2578.js": "880b54573fbd860909683f0dc10e75b69139f652",
+    "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/index.html": "340113b166ea7c4e9d046c8a0ed626386f044d0c",
+    "/main.253a72c3748c22138bb2.js": "bacf8d8915faaeefd9f8333f556ff34a1601fc0e",
+    "/manifest.webmanifest": "5e6867bc1bc6623a7446f96a4d06fbb30d01b9e5",
+    "/polyfills.1f68fb029bfec463bf06.js": "9072b64d4315d7bd0075884f4292084f83451d08",
+    "/runtime.0d3d1c86ab632972fd37.js": "b391f41054958e2229f07d6032edbe890b6ce08c",
+    "/styles.cdfc2ecc69f2164beee9.css": "cdec1a9ee23c75acb0c326382f515ed2c0f6a968"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

@@ -1,0 +1,113 @@
+{
+  "configVersion": 1,
+  "timestamp": 1628589115043,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/327.4ed2764dee56295f2949.js",
+        "/395.926ae2daca97a843fbb0.js",
+        "/504.4a6d25ffcef058005a53.js",
+        "/716.bacaad930082560728bc.js",
+        "/901.1ea9ae102baa2ba78f78.js",
+        "/937.b4a9b2d86dc20db80c09.js",
+        "/common.116f4bd45e684b5d2578.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main.d50c338393a63ec6266f.js",
+        "/manifest.webmanifest",
+        "/polyfills.1f68fb029bfec463bf06.js",
+        "/runtime.ac29c3eb0a34d5bc0167.js",
+        "/styles.49a50cbba9e84a0f969b.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/bricks/Illustration.svg",
+        "/assets/bricks/balloon.png",
+        "/assets/bricks/balloon.svg",
+        "/assets/bricks/baloon.svg",
+        "/assets/bricks/mic.svg",
+        "/assets/bricks/scale-arrow.svg",
+        "/assets/bricks/scale-bg.svg",
+        "/assets/bricks/volume.svg",
+        "/assets/fonts/Roboto-Regular.ttf",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/327.4ed2764dee56295f2949.js": "8ae8c480bde2b58e112979220ab2ec2257b65149",
+    "/395.926ae2daca97a843fbb0.js": "5a393e7099cc0040ba1c2ba3ab694befa9ce059b",
+    "/504.4a6d25ffcef058005a53.js": "f64148da0704e3073d9d400ddf611af54570901b",
+    "/716.bacaad930082560728bc.js": "9c97222c36a9dc8bbbc522de6d226f6a16ab8015",
+    "/901.1ea9ae102baa2ba78f78.js": "4be0f8ba8bfe527745aef31b3c1f420630c64737",
+    "/937.b4a9b2d86dc20db80c09.js": "b7598705e1286e7e65f9fbdaf6860959ddb716ad",
+    "/assets/bricks/Illustration.svg": "81cdb5fddeeb9d742643cf86a07578e3ab71aa5a",
+    "/assets/bricks/balloon.png": "c8b992e75fbdaf4543ad479715ad8f0f9e65bc05",
+    "/assets/bricks/balloon.svg": "ae8d872a4355e75d7e24ac698110f3050b14593b",
+    "/assets/bricks/baloon.svg": "381d4116ea7bde67df011152ed8407c290782128",
+    "/assets/bricks/mic.svg": "a0808449747174c8b44cc118b90ef03a1288f886",
+    "/assets/bricks/scale-arrow.svg": "8d201b8bbfe77c5f6b9e386499a2d252f17d463c",
+    "/assets/bricks/scale-bg.svg": "ec58cfe924a34b9a3de63dc823a40cd3e497b87e",
+    "/assets/bricks/volume.svg": "91ae50ef8f5e1f2118be1d0ffb8d5b00c3ec6581",
+    "/assets/fonts/Roboto-Regular.ttf": "84d102488738b0ebbc7a5087973effbd54c95bd5",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/common.116f4bd45e684b5d2578.js": "880b54573fbd860909683f0dc10e75b69139f652",
+    "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/index.html": "05856dff442378eb27f66a075137fe8ad45e0048",
+    "/main.d50c338393a63ec6266f.js": "d39968f11146c9ced7fe0a1ab3bad73586dc31e2",
+    "/manifest.webmanifest": "5e6867bc1bc6623a7446f96a4d06fbb30d01b9e5",
+    "/polyfills.1f68fb029bfec463bf06.js": "9072b64d4315d7bd0075884f4292084f83451d08",
+    "/runtime.ac29c3eb0a34d5bc0167.js": "b7fd5eb0b4477ca03382d3a6b17c142771f66e27",
+    "/styles.49a50cbba9e84a0f969b.css": "ff7900ee5770452756aa550e6ec163736914f61d"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
