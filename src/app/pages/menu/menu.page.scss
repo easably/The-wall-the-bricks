@@ -1,5 +1,80 @@
+
+.heading {
+
+  font-family: 'Fredoka One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 257%;
+  margin-bottom: 20px;
+
+  /* or 87px */
+
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.84px;
+
+  color: #404040;
+
+}
 .games-list {
-    padding: 30px 20px;
+  background: url('./../../../assets/menu-back.svg') no-repeat ; /* Путь к фоновому изображению */
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  padding: 30px 20px;
     display: flex;
     flex-direction: column;
+}
+.games-list p{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 11px 37px;
+  gap: 10px;
+
+  position: absolute;
+  width: 152px;
+  height: 95px;
+  left: 20px;
+  top: 159px;
+
+  background: #1DBFB7;
+  border-bottom: 6px solid #1B9F99;
+  border-radius: 18px;
+
+}
+.myButtonWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+.myButton {
+   // background-color: #1DBFB7;
+   padding: 15% 8% 15% 8%;
+    height: 95px;
+    width: 152px;
+    //border-radius: 10px;
+    //margin-left: 15px;
+    //margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    text-align: left;
+    align-items: flex-start;
+    color: #ffffff;
+    //text-transform: lowercase;
+   // background: #1DBFB7;
+    border-bottom: 6px solid;
+    border-radius: 18px;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
 }

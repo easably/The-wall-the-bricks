@@ -1,13 +1,22 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Select a game</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
+
   <div class="games-list">
-    <ion-button *ngFor="let game of gamesList" (click)="goGame(game)">
-      {{game.gameName}}
-    </ion-button>
+<div class="heading">
+   Select a game
+</div>
+<div class="myButtonWrapper">
+    <div  *ngFor="let game of gamesList">
+  <button  class="myButton" [style.background-color]="game.color.backgroundColor"
+           [style.border-color]="game.color.borderColor"
+           (click)="goGame(game)">
+    <span>{{game.gameName}}</span>
+    <img [src]= "game.picPath">
+  </button>
+</div>
+</div>
   </div>
+
 </ion-content>
+
+
