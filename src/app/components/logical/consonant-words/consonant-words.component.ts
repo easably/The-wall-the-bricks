@@ -2,20 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { MainBridgeService } from 'src/app/services/main-bridge/main-bridge.service';
 import { TextToSpeech } from '@capacitor-community/text-to-speech';
 import { Location } from '@angular/common';
+import { Observable } from 'rxjs';
+import {take} from "rxjs/operators";
+import {AngularFireDatabase} from "@angular/fire/compat/database";
 
-
-const DATA: Array<[string, string]> = [
-  ['red', 'read'],
-  ['seen', 'scene'],
-  ['brows', 'browse'],
-  ['desert', 'dessert'],
-  ['loose', 'lose'],
-  ['quite', 'quiet'],
-  ['dairy', 'diary'],
-  ['career', 'carrier'],
-  ['accept', 'except'],
-  ['alone', 'along'],
-];
+// const DATA: Array<[string, string]> = [
+//   ['red', 'read'],
+//   ['seen', 'scene'],
+//   ['brows', 'browse'],
+//   ['desert', 'dessert'],
+//   ['loose', 'lose'],
+//   ['quite', 'quiet'],
+//   ['dairy', 'diary'],
+//   ['career', 'carrier'],
+//   ['accept', 'except'],
+//   ['alone', 'along'],
+// ];
 
 @Component({
   selector: 'app-consonant-words',
@@ -25,6 +27,7 @@ const DATA: Array<[string, string]> = [
 export class ConsonantWordsComponent implements OnInit {
   disableAnswerButtons = true;
   disableNextButton = true;
+  wordsData = [];
   levelData = {
     words: [],
     guessWord: ''
@@ -34,10 +37,15 @@ export class ConsonantWordsComponent implements OnInit {
 
   constructor(
     private mainBridgeService: MainBridgeService,
-    private location: Location
-  ) { }
+    private location: Location,
+    private db: AngularFireDatabase
 
-  ngOnInit() {
+) { }
+
+  async ngOnInit() {
+    const items = this.db.list('consonant-words').valueChanges();
+    this.wordsData = await items.pipe(take(1)).toPromise();
+
     this.getWord();
   }
 
@@ -70,7 +78,7 @@ export class ConsonantWordsComponent implements OnInit {
     setTimeout(() => {
       this.level++;
   
-      if (DATA[this.level]) {
+      if (this.wordsData[this.level]) {
         this.getWord();
       } else {
         this.mainBridgeService.finishGame();
@@ -82,7 +90,7 @@ export class ConsonantWordsComponent implements OnInit {
   }
 
   private getWord() {
-    this.levelData.words = DATA[this.level];
+    this.levelData.words = this.wordsData[this.level];
 
     this.levelData.guessWord = this.levelData.words[Math.floor(Math.random() * 2)];
   }

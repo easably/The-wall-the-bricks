@@ -9,8 +9,8 @@
   <div class="answer-buttons">
     <button #answerButton class="button button_answer"
       [disabled]="disableAnswerButtons"
-      *ngFor="let word of levelData.words"
-      (click)="onAnswer(answerButton, word)"
+      *ngFor="let word of levelData?.words"
+      (click)="onAnswer(answerButton, word || '')"
     >{{word}}</button>
   </div>
 
