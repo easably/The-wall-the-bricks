@@ -6,18 +6,6 @@ import { Observable } from 'rxjs';
 import {take} from "rxjs/operators";
 import {AngularFireDatabase} from "@angular/fire/compat/database";
 
-// const DATA: Array<[string, string]> = [
-//   ['red', 'read'],
-//   ['seen', 'scene'],
-//   ['brows', 'browse'],
-//   ['desert', 'dessert'],
-//   ['loose', 'lose'],
-//   ['quite', 'quiet'],
-//   ['dairy', 'diary'],
-//   ['career', 'carrier'],
-//   ['accept', 'except'],
-//   ['alone', 'along'],
-// ];
 
 @Component({
   selector: 'app-consonant-words',
